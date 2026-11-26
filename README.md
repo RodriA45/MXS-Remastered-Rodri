@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./banner.svg" alt="MXS-Remastered-Rodri Banner" width="100%" />
+<img src="./.github/banner.svg" alt="MXS-Remastered-Rodri Banner" width="100%" />
 
 <br />
 <br />
@@ -39,7 +39,7 @@ El proyecto original esta pensado para versiones modernas de 64 bits con pipelin
 ## Comparativa Visual
 
 <div align="center">
-  <img src="./comparison.jpg" alt="Comparativa MX Simulator 2017 Original vs Remasterizado" width="100%" />
+  <img src="./.github/comparison.jpg" alt="Comparativa MX Simulator 2017 Original vs Remasterizado" width="100%" />
   <br />
   <sub>Izquierda: MX Simulator 2017 sin modificar. Derecha: MXS-Remastered-Rodri con iluminacion direccional, hora del dia dinamica, detalle de tierra, sombras y huellas activas.</sub>
 </div>
@@ -105,22 +105,31 @@ El ejecutable de 2017 utiliza convenciones graficas distintas a las versiones mo
 
 ## Instalacion
 
-El repositorio contiene los binarios, la configuracion base y la carpeta de packs de sonido listos para copiar directo al juego.
+Todos los archivos que necesitas para el juego estan agrupados dentro de la carpeta `Instalar/` para evitar confusiones con la documentacion del repositorio.
 
-### Contenido incluido
+```text
+MXS-Remastered-Rodri/
+├── Instalar/                           <-- Copiar TODO el contenido a la carpeta del juego
+│   ├── opengl32.dll
+│   ├── MXS_REMASTERED.ini
+│   ├── MXS_REMASTERED_patch_notes.txt
+│   └── MXS_REMASTERED_sounds/
+├── .github/                            <-- Recursos visuales de este README (no copiar)
+├── LICENSE
+└── README.md
+```
+
+### Contenido dentro de `Instalar/`
 
 | Archivo / Carpeta | Funcion |
 | :--- | :--- |
-| `opengl32.dll` | Proxy OpenGL de 32 bits con motor de shaders, clima y camara en primera persona |
-| `MXS_REMASTERED.ini` | Configuracion inicial lista para usar y editable en vivo desde el juego |
-| `MXS_REMASTERED_patch_notes.txt` | Registro de cambios mostrado en el panel interno del mod |
-| `MXS_REMASTERED_sounds/` | Packs de sonido de motor (`125 2T`, `250 2T`, `250F 4T`, `450F 4T` y `450F 4T Clear`) |
-| `comparison.jpg` | Captura comparativa de referencia (`Original` vs `Remasterizado`) |
-| `banner.svg` | Encabezado vectorial del repositorio |
-| `LICENSE` | Licencia MIT con atribucion al proyecto base y a esta adaptacion |
+| `Instalar/opengl32.dll` | Proxy OpenGL de 32 bits con motor de shaders, clima y camara en primera persona |
+| `Instalar/MXS_REMASTERED.ini` | Configuracion inicial lista para usar y editable en vivo desde el juego |
+| `Instalar/MXS_REMASTERED_patch_notes.txt` | Registro de cambios mostrado en el panel interno del mod |
+| `Instalar/MXS_REMASTERED_sounds/` | Packs de sonido de motor (`125 2T`, `250 2T`, `250F 4T`, `450F 4T` y `450F 4T Clear`) |
 
 <details>
-<summary><strong>Ver packs de sonido incluidos en <code>MXS_REMASTERED_sounds/</code> (clic para desplegar)</strong></summary>
+<summary><strong>Ver packs de sonido incluidos en <code>Instalar/MXS_REMASTERED_sounds/</code> (clic para desplegar)</strong></summary>
 
 <br />
 
@@ -136,13 +145,9 @@ El repositorio contiene los binarios, la configuracion base y la carpeta de pack
 
 ### Pasos de instalacion
 
-1. Cerra completamente **MX Simulator** si se encuentra en ejecucion.
-2. Ubica la carpeta principal de instalacion del juego (la misma carpeta donde esta `mx-2017-01-08-1331.exe`).
-3. Copia estos archivos y carpeta dentro de la carpeta del juego:
-   - `opengl32.dll`
-   - `MXS_REMASTERED.ini`
-   - `MXS_REMASTERED_patch_notes.txt`
-   - `MXS_REMASTERED_sounds/` (carpeta completa)
+1. Descarga el repositorio desde el boton verde **Code** -> **Download ZIP** y descomprimilo.
+2. Cerra completamente **MX Simulator** si se encuentra en ejecucion.
+3. Abri la carpeta `Instalar/`, selecciona **todo** su contenido (<kbd>Ctrl</kbd> + <kbd>A</kbd>) y copialo en la carpeta principal de MX Simulator (donde esta `mx-2017-01-08-1331.exe`).
 4. Inicia el juego normalmente desde `mx-2017-01-08-1331.exe`.
 5. Una vez en pista, presiona <kbd>E</kbd> para abrir el panel de **MXS Remastered**:
    - Activa o ajusta graficos en la pestana **GRAPHICS**.
@@ -193,12 +198,12 @@ Para volver al juego completamente original, basta con eliminar `opengl32.dll`, 
 Cada compilacion distribuida en este repositorio incluye su huella criptografica para verificar que el binario `opengl32.dll` no fue alterado:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\opengl32.dll
+Get-FileHash -Algorithm SHA256 .\Instalar\opengl32.dll
 ```
 
 | Archivo | Arquitectura | SHA-256 |
 | :--- | :--- | :--- |
-| `opengl32.dll` | `Win32 (x86)` | `85A266EF3F76475FD87351EAE46A896BE4DAC9EFC72F4EA9DD81198856020D3D` |
+| `Instalar/opengl32.dll` | `Win32 (x86)` | `85A266EF3F76475FD87351EAE46A896BE4DAC9EFC72F4EA9DD81198856020D3D` |
 
 ---
 
