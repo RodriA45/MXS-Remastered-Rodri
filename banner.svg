@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="MXS-Remastered-Rodri 2017 Edition">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090b10"/>
+      <stop offset="55%" stop-color="#111520"/>
+      <stop offset="100%" stop-color="#170c10"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="60%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fb7185" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frameClip">
+      <rect x="0" y="0" width="1200" height="260" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frameClip)">
+    <rect width="1200" height="260" fill="url(#bg)"/>
+    <rect width="1200" height="260" fill="url(#grid)"/>
+
+    <!-- Subtle animated telemetry sweep -->
+    <rect x="-400" y="0" width="360" height="260" fill="url(#sweep)">
+      <animate attributeName="x" from="-400" to="1300" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Diagonal motorsport accent stripes on right -->
+    <g opacity="0.16">
+      <polygon points="940,0 1005,0 895,260 830,260" fill="#e11d48"/>
+      <polygon points="1030,0 1060,0 950,260 920,260" fill="#ffffff"/>
+      <polygon points="1085,0 1102,0 992,260 975,260" fill="#e11d48"/>
+    </g>
+
+    <!-- Top-left technical eyebrow -->
+    <g transform="translate(56, 52)">
+      <rect x="0" y="-12" width="8" height="8" rx="1.5" fill="#e11d48">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="18" y="-4" fill="#9ca3af" font-family="Segoe UI, Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="3">
+        OPENGL 1.X / ARB PROXY  //  WIN32 X86  //  MX SIMULATOR 2017 SNAPSHOT
+      </text>
+    </g>
+
+    <!-- Main title -->
+    <text x="54" y="132" fill="#f8fafc" font-family="Segoe UI, Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.5">
+      MXS-REMASTERED
+      <tspan fill="#f43f5e" font-weight="300"> / </tspan>
+      <tspan fill="#e2e8f0" font-weight="700">RODRI</tspan>
+    </text>
+
+    <!-- Accent progress bar -->
+    <rect x="56" y="152" width="520" height="3" rx="1.5" fill="url(#accent)"/>
+
+    <!-- Subtitle -->
+    <text x="56" y="186" fill="#cbd5e1" font-family="Segoe UI, Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" letter-spacing="0.4">
+      Shaders GLSL 150, clima dinamico, huellas en tiempo real y camara en primera persona para MX Simulator 2017
+    </text>
+
+    <!-- Bottom metadata bar -->
+    <g transform="translate(56, 224)" font-family="Consolas, SFMono-Regular, Menlo, monospace" font-size="12" fill="#94a3b8">
+      <text x="0" y="0">BASE: Voaks/MXS-Remastered (MIT)</text>
+      <text x="275" y="0" fill="#475569">|</text>
+      <text x="295" y="0">ADAPTADO Y FIRMADO POR: RODRI</text>
+      <text x="565" y="0" fill="#475569">|</text>
+      <text x="585" y="0" fill="#f43f5e">TARGET: mx-2017-01-08-1331.exe</text>
+    </g>
+
+    <!-- Right-side telemetry frame -->
+    <g transform="translate(970, 152)" font-family="Consolas, SFMono-Regular, Menlo, monospace" font-size="11" fill="#cbd5e1">
+      <rect x="0" y="0" width="182" height="74" rx="6" fill="#0b0f17" fill-opacity="0.82" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="22" fill="#94a3b8">BUILD</text>
+      <text x="72" y="22" fill="#f8fafc">Win32 Release</text>
+      <text x="14" y="42" fill="#94a3b8">EXPORTS</text>
+      <text x="72" y="42" fill="#f8fafc">368 / 39 Hooks</text>
+      <text x="14" y="62" fill="#94a3b8">STATUS</text>
+      <text x="72" y="62" fill="#4ade80">VERIFIED 20/20</text>
+    </g>
+
+    <!-- Outer hairline border -->
+    <rect x="0.5" y="0.5" width="1199" height="259" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+  </g>
+</svg>
