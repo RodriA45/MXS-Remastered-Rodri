@@ -55,6 +55,7 @@ El proyecto original esta pensado para versiones modernas de 64 bits con pipelin
 | **Clima Dinamico** | Sin clima en terreno | Lluvia con suelo mojado, charcos reflectantes y brillo en moto/piloto; nieve acumulada en suelo y cubiertas |
 | **Terreno y Ruedas** | Superficie plana sin marcas persistentes | Detalle fino de tierra, huellas/roderas persistentes de ambas ruedas, barro/nieve sobre las cubiertas y `roost` dinamico |
 | **Camara Primera Persona** | Camara rigida vinculada al juego | Estabilizacion de horizonte y cabeceo (`HorizonLock` / `PitchLock`), filtro de inercia, cuello dinamico y ocultado de torso propio |
+| **Sonidos de Motor** | Tablas de audio stock de 2017 | 5 packs de sonido incluidos (`125 2T`, `250 2T`, `250F 4T`, `450F 4T` y `450F 4T Clear`) activables desde el menu |
 | **HUD y Menus** | Render plano bajo `glFrustum` | Deteccion exacta previa al HUD (`GL_ALWAYS`), menus y pantallas de carga sin distorsion ni oscurecimiento |
 | **Interfaz en Vivo** | Edicion manual de archivos | Menu superpuesto en juego con la tecla <kbd>E</kbd>, 5 presets intercambiables y guardado instantaneo |
 
@@ -104,39 +105,57 @@ El ejecutable de 2017 utiliza convenciones graficas distintas a las versiones mo
 
 ## Instalacion
 
-Esta carpeta contiene unicamente los archivos listos para instalar, sin subcarpetas adicionales.
+El repositorio contiene los binarios, la configuracion base y la carpeta de packs de sonido listos para copiar directo al juego.
 
 ### Contenido incluido
 
-| Archivo | Funcion |
+| Archivo / Carpeta | Funcion |
 | :--- | :--- |
 | `opengl32.dll` | Proxy OpenGL de 32 bits con motor de shaders, clima y camara en primera persona |
 | `MXS_REMASTERED.ini` | Configuracion inicial lista para usar y editable en vivo desde el juego |
 | `MXS_REMASTERED_patch_notes.txt` | Registro de cambios mostrado en el panel interno del mod |
+| `MXS_REMASTERED_sounds/` | Packs de sonido de motor (`125 2T`, `250 2T`, `250F 4T`, `450F 4T` y `450F 4T Clear`) |
 | `comparison.jpg` | Captura comparativa de referencia (`Original` vs `Remasterizado`) |
 | `banner.svg` | Encabezado vectorial del repositorio |
 | `LICENSE` | Licencia MIT con atribucion al proyecto base y a esta adaptacion |
+
+<details>
+<summary><strong>Ver packs de sonido incluidos en <code>MXS_REMASTERED_sounds/</code> (clic para desplegar)</strong></summary>
+
+<br />
+
+| Archivo `.pack` | Motor que reemplaza |
+| :--- | :--- |
+| `MXS_REMASTERED_engine_default125.pack` | `125` dos tiempos (`default125`) |
+| `MXS_REMASTERED_engine_default250.pack` | `250` dos tiempos (`default250`) |
+| `MXS_REMASTERED_engine_default250f.pack` | `250F` cuatro tiempos (`default250f`) |
+| `MXS_REMASTERED_engine_default450f.pack` | `450F` cuatro tiempos (`default450f`) |
+| `MXS_REMASTERED_engine_default450f_clear.pack` | `450F` cuatro tiempos limpio (`default450f`) |
+
+</details>
 
 ### Pasos de instalacion
 
 1. Cerra completamente **MX Simulator** si se encuentra en ejecucion.
 2. Ubica la carpeta principal de instalacion del juego (la misma carpeta donde esta `mx-2017-01-08-1331.exe`).
-3. Copia estos tres archivos dentro de esa carpeta:
+3. Copia estos archivos y carpeta dentro de la carpeta del juego:
    - `opengl32.dll`
    - `MXS_REMASTERED.ini`
    - `MXS_REMASTERED_patch_notes.txt`
+   - `MXS_REMASTERED_sounds/` (carpeta completa)
 4. Inicia el juego normalmente desde `mx-2017-01-08-1331.exe`.
 5. Una vez en pista, presiona <kbd>E</kbd> para abrir el panel de **MXS Remastered**:
    - Activa o ajusta graficos en la pestana **GRAPHICS**.
    - Activa lluvia o nieve en la pestana **WEATHER**.
    - Activa la camara dinamica en **FIRST PERSON** (o directamente con <kbd>F8</kbd>).
+   - Activa los packs de sonido de motor en la pestana **SOUNDS** (el mod instala automaticamente el `.saf` correspondiente al reiniciar el juego).
    - Presiona **SAVE** dentro del menu para conservar tus cambios.
 
 > **Recomendacion de calibracion (una sola vez):** al iniciar en pista, circula unos 5 segundos en linea recta en tercera persona para que el mod aprenda la posicion exacta de ambas ruedas y la guarde automaticamente en `MXS_REMASTERED.ini`. A partir de ese momento, las huellas y sombras funcionaran al instante tambien en primera persona.
 
 ### Desinstalacion
 
-Para volver al juego completamente original, basta con eliminar `opengl32.dll` y los archivos `MXS_REMASTERED.*` de la carpeta de MX Simulator. Ningun archivo original del juego es modificado.
+Para volver al juego completamente original, basta con eliminar `opengl32.dll`, la carpeta `MXS_REMASTERED_sounds/` y los archivos `MXS_REMASTERED.*` de la carpeta de MX Simulator. Ningun archivo original del juego es modificado.
 
 ---
 
