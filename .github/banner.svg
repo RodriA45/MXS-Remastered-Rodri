@@ -59,18 +59,18 @@
     <!-- Accent progress bar -->
     <rect x="56" y="152" width="520" height="3" rx="1.5" fill="url(#accent)"/>
 
-    <!-- Subtitle -->
+    <!-- Subtitle (international technical phrasing) -->
     <text x="56" y="186" fill="#cbd5e1" font-family="Segoe UI, Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" letter-spacing="0.4">
-      Shaders GLSL 150, clima dinamico, huellas en tiempo real y camara en primera persona para MX Simulator 2017
+      GLSL 150 Shaders  ·  Dynamic Weather  ·  Real-Time Ruts  ·  First-Person Camera  ·  Engine Sound Packs
     </text>
 
     <!-- Bottom metadata bar -->
     <g transform="translate(56, 224)" font-family="Consolas, SFMono-Regular, Menlo, monospace" font-size="12" fill="#94a3b8">
       <text x="0" y="0">BASE: Voaks/MXS-Remastered (MIT)</text>
       <text x="275" y="0" fill="#475569">|</text>
-      <text x="295" y="0">ADAPTADO Y FIRMADO POR: RODRI</text>
-      <text x="565" y="0" fill="#475569">|</text>
-      <text x="585" y="0" fill="#f43f5e">TARGET: mx-2017-01-08-1331.exe</text>
+      <text x="295" y="0">ADAPTED &amp; SIGNED BY: RodriA45</text>
+      <text x="545" y="0" fill="#475569">|</text>
+      <text x="565" y="0" fill="#f43f5e">TARGET: mx-2017-01-08-1331.exe</text>
     </g>
 
     <!-- Right-side telemetry frame -->
